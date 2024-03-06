@@ -1,2 +1,0 @@
-1 : first statement
-2 : second statement
