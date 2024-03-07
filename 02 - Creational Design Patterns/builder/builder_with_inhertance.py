@@ -45,3 +45,5 @@ if __name__ == '__main__':
         .born('1/1/1980')\
         .build()  # this does NOT work in C#/C++/Java/...
     print(me)
+
+# this solve open close principle
