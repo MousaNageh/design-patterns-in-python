@@ -1,64 +1,85 @@
-'''
-
-When dealing with complex building processes that might require more than one build strategy, 
-the Builder pattern still applies, 
-but you might need to introduce additional layers of abstraction or utilize different types of builders to accommodate the complexity.
-Let's consider a new example to explain this scenario: building a customizable House.
-
-Scenario
-Suppose you're building a software to model house construction. 
-A house can have various features: number of floors, type of roof, presence of a garden, etc. 
-You might want different types of houses, such as a simple one-story house, 
-a two-story house with a garden, or a luxury villa.
-'''
-from abc import ABC, abstractclassmethod
-
-# Product
-class House:
+class Person:
     def __init__(self):
-        self.floors = None
-        self.roof = None
-        self.garden = False
+        print('Creating an instance of Person')
+        # address
+        self.street_address = None
+        self.postcode = None
+        self.city = None
+        # employment info
+        self.company_name = None
+        self.position = None
+        self.annual_income = None
 
-#build 
-class HouseBuilder(ABC):
-    
-    @abstractclassmethod
-    def set_floors(self, number): ...
-    
-    @abstractclassmethod
-    def set_roof(self, roof_type):...
-    
-    @abstractclassmethod
-    def set_garden(self, has_garden):...
-    
-    @abstractclassmethod
-    def get_house(self): ...
+    def __str__(self) -> str:
+        return f'Address: {self.street_address}, {self.postcode}, {self.city}\n' +\
+            f'Employed at {self.company_name} as a {self.postcode} earning {self.annual_income}'
 
 
-#Concrete Builders
-class SimpleHouseBuilder(HouseBuilder):
-    def __init__(self):
-        self.house = House()
-    
-    # Implementations of building steps...
+class PersonBuilder:  # facade
+    def __init__(self, person=None):
+        if person is None:
+            self.person = Person()
+        else:
+            self.person = person
 
-class LuxuryVillaBuilder(HouseBuilder):
-    def __init__(self):
-        self.house = House()
-    
-    # Implementations of building steps...
+    @property
+    def lives(self):
+        return PersonAddressBuilder(self.person)
 
-#Director
-class HouseDirector:
-    def __init__(self, builder):
-        self._builder = builder
+    @property
+    def works(self):
+        return PersonJobBuilder(self.person)
 
-    def construct_simple_house(self):
-        self._builder.set_floors(1)
-        self._builder.set_roof('simple')
+    def build(self):
+        return self.person
 
-    def construct_luxury_villa(self):
-        self._builder.set_floors(2)
-        self._builder.set_roof('tile')
-        self._builder.set_garden(True)
+
+class PersonJobBuilder(PersonBuilder):
+    def __init__(self, person):
+        super().__init__(person)
+
+    def at(self, company_name):
+        self.person.company_name = company_name
+        return self
+
+    def as_a(self, position):
+        self.person.position = position
+        return self
+
+    def earning(self, annual_income):
+        self.person.annual_income = annual_income
+        return self
+
+
+class PersonAddressBuilder(PersonBuilder):
+    def __init__(self, person):
+        super().__init__(person)
+
+    def at(self, street_address):
+        self.person.street_address = street_address
+        return self
+
+    def with_postcode(self, postcode):
+        self.person.postcode = postcode
+        return self
+
+    def in_city(self, city):
+        self.person.city = city
+        return self
+
+
+if __name__ == '__main__':
+    pb = PersonBuilder()
+    p = pb\
+        .lives\
+            .at('123 London Road')\
+            .in_city('London')\
+            .with_postcode('SW12BC')\
+        .works\
+            .at('Fabrikam')\
+            .as_a('Engineer')\
+            .earning(123000)\
+        .build()
+    print(p)
+    person2 = PersonBuilder().build()
+    print(person2)
