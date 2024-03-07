@@ -1,3 +1,9 @@
+'''
+When dealing with complex building processes that might require more than one build strategy, 
+the Builder pattern still applies, but you might need to introduce additional layers of abstraction or utilize different types of builders
+to accommodate the complexity
+'''
+
 class Person:
     def __init__(self):
         print('Creating an instance of Person')
