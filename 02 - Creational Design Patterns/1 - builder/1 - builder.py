@@ -8,7 +8,7 @@ Key Components
 
 1 - Product: The complex object that is being built.
 
-3 - Builder: Provides an interface for adding parts to the object being built. (optional)
+3 - Builder interface: Provides an interface for adding parts to the object being built. (optional)
 
 4 - Concrete Builder: Implements the Builder interface and provides specific implementations for the steps 
     required to build a particular representation of the product. It keeps track of the representation it 
@@ -70,15 +70,19 @@ class MyComputerBuilder(ComputerBuilder):
     
     def set_cpu(self, cpu):
         self.computer.cpu = cpu
+        return self
 
     def set_gpu(self, gpu):
         self.computer.gpu = gpu
+        return self
 
     def set_memory(self, memory):
         self.computer.memory = memory
+        return self
 
     def set_storage(self, storage):
         self.computer.storage = storage
+        return self
 
     def get_computer(self):
         return self.computer
