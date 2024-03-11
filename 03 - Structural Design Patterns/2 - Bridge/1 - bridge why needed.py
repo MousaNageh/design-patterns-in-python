@@ -9,7 +9,8 @@ definition 2:
 The Bridge: design pattern is a structural design pattern that helps in separating the abstraction (the interface) from the implementation,
 so that the two can vary independently. 
 
-
+my definition:
+splitting a related classes to abstract and implementation classes, then create a bridge by passing instance as params
 
 This pattern is used to decouple an abstraction from its implementation so that the two can vary independently,promoting flexibility.
 The pattern involves an interface which acts as a bridge which makes the functionality of concrete classes independent 
