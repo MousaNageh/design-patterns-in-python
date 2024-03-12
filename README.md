@@ -19,4 +19,6 @@
 
         * [bridge](./03%20-%20Structural%20Design%20Patterns/2%20-%20Bridge)
 
+        * [Composite](./03%20-%20Structural%20Design%20Patterns/3%20-%20Composite)
+
         
