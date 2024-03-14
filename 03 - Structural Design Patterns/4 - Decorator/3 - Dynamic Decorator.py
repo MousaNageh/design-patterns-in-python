@@ -15,7 +15,7 @@ class FileWithLogging:
   def __getattr__(self, item):
     return getattr(self.__dict__['file'], item)
 
-  def __setattr__(self, key, value):
+  def __setattr__(self, key, value):    
     if key == 'file':
       self.__dict__[key] = value
     else:
