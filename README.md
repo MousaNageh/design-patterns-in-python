@@ -22,3 +22,5 @@
         * [Composite](./03%20-%20Structural%20Design%20Patterns/3%20-%20Composite)
 
         * [Decorator](./03%20-%20Structural%20Design%20Patterns/4%20-%20Decorator)
+
+        * [Facade](./03%20-%20Structural%20Design%20Patterns/5%20-%20Facade)
