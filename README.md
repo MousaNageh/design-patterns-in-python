@@ -24,3 +24,6 @@
         * [Decorator](./03%20-%20Structural%20Design%20Patterns/4%20-%20Decorator)
 
         * [Facade](./03%20-%20Structural%20Design%20Patterns/5%20-%20Facade)
+
+        * [Flyweight](./03%20-%20Structural%20Design%20Patterns/6%20-%20Flyweight)
+
