@@ -1,5 +1,6 @@
 '''
 the flyweight software design pattern refers to an object that minimizes memory usage by sharing some of its data with other similar objects.
+so we can make that by saving a shared data extranally
 '''
 '''
 Scenario
