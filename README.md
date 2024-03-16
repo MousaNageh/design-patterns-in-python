@@ -4,15 +4,15 @@
     1. [The SOLID Design Principles](./01%20-%20The%20SOLID%20Design%20Principles) : 
         `The SOLID principles are a set of five design principles intended to make software designs more understandable, flexible, and maintainable. They are a cornerstone of object-oriented design and programming, providing guidelines for writing software that is easy to manage and extend over time. Here's a brief overview of each principle:`
 
-        * `Single Responsibility Principle (SRP):` A class should have only one reason to change, meaning it should have only one job or responsibility. This principle encourages a separation of concerns, leading to more modular and manageable code.
+        * [Single Responsibility Principle (SRP)](./01%20-%20The%20SOLID%20Design%20Principles/Single_Responsibility_Principle.py): A class should have only one reason to change, meaning it should have only one job or responsibility. This principle encourages a separation of concerns, leading to more modular and manageable code.
 
-        * `Open/Closed Principle (OCP):` Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification. This means you should be able to add new functionality to an object or method without changing the existing code that uses it.
+        * [Open/Closed Principle (OCP)](./01%20-%20The%20SOLID%20Design%20Principles/Open_Closed_Principle.py): Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification. This means you should be able to add new functionality to an object or method without changing the existing code that uses it.
 
-        * `Liskov Substitution Principle (LSP):` Objects in a program should be replaceable with instances of their subtypes without altering the correctness of the program. This principle is fundamental to the design of systems that use inheritance, ensuring that derived classes just extend without replacing the behavior of base classes.
+        * [Liskov Substitution Principle (LSP)](./01%20-%20The%20SOLID%20Design%20Principles/Liskov_Substitution_Principle.py): Objects in a program should be replaceable with instances of their subtypes without altering the correctness of the program. This principle is fundamental to the design of systems that use inheritance, ensuring that derived classes just extend without replacing the behavior of base classes.
 
-        * `Interface Segregation Principle (ISP):` Clients should not be forced to depend upon interfaces they do not use. This principle encourages splitting large interfaces into smaller, more specific ones so that clients only need to know about the methods that are of interest to them.
+        * [Interface Segregation Principle (ISP)](./01%20-%20The%20SOLID%20Design%20Principles/Interface_Segregation_Principle.py): Clients should not be forced to depend upon interfaces they do not use. This principle encourages splitting large interfaces into smaller, more specific ones so that clients only need to know about the methods that are of interest to them.
 
-        * `Dependency Inversion Principle (DIP):` High-level modules should not depend on low-level modules. Both should depend on abstractions. Moreover, abstractions should not depend on details; details should depend on abstractions. This principle leads to a decoupling of software modules, making the system more flexible and enabling the independent development and testing of modules.
+        * [Dependency Inversion Principle (DIP)](./01%20-%20The%20SOLID%20Design%20Principles/Dependency_Inversion_Principle.py): High-level modules should not depend on low-level modules. Both should depend on abstractions. Moreover, abstractions should not depend on details; details should depend on abstractions. This principle leads to a decoupling of software modules, making the system more flexible and enabling the independent development and testing of modules.
 
     
 
