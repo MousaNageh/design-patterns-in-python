@@ -58,7 +58,7 @@
         `Behavioral design patterns are a group of design patterns that are primarily concerned with algorithms and the assignment of responsibilities between objects. They help manage relationships between objects, making communication between objects easier, more flexible, and more efficient. These patterns focus on how objects interact and distribute responsibility among themselves to perform a task. Here are some of the key behavioral design patterns:`
 
         
-        * [Chain of Responsibility](./04%20-%20Behavioral%20Design%20Patterns/1%20-%20Chain%20of%20Responsibility) : Avoids coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. The request gets passed along a chain of objects until one of them handles it.
+        * [Chain of Responsibility](./04%20-%20Behavioral%20Design%20Patterns/1%20-%20Chain%20of%20Responsibility) : The Chain of Responsibility    pattern is a behavioral design pattern that allows you to pass requests along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain. 
 
         
         * [Command](./04%20-%20Behavioral%20Design%20Patterns/2%20-%20Command) : Encapsulates a request as an object, thereby allowing for the parameterization of clients with queues, requests, and operations. It also allows for the support of undoable operations.
