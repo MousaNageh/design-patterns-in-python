@@ -52,3 +52,40 @@
         * [Proxy](./03%20-%20Structural%20Design%20Patterns/7%20-%20Proxy) : Provides a surrogate or placeholder for another object to control access to it, useful for lazy loading, controlling access, or logging, for instance.
 
         ______________________________________________________________
+
+    4. [Behavioral Design Patterns](./04%20-%20Behavioral%20Design%20Patterns)
+
+        `Behavioral design patterns are a group of design patterns that are primarily concerned with algorithms and the assignment of responsibilities between objects. They help manage relationships between objects, making communication between objects easier, more flexible, and more efficient. These patterns focus on how objects interact and distribute responsibility among themselves to perform a task. Here are some of the key behavioral design patterns:`
+
+        
+        * [Chain of Responsibility](./04%20-%20Behavioral%20Design%20Patterns/1%20-%20Chain%20of%20Responsibility) : Avoids coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. The request gets passed along a chain of objects until one of them handles it.
+
+        
+        * [Command](./04%20-%20Behavioral%20Design%20Patterns/2%20-%20Command) : Encapsulates a request as an object, thereby allowing for the parameterization of clients with queues, requests, and operations. It also allows for the support of undoable operations.
+
+
+        * [Iterator](./04%20-%20Behavioral%20Design%20Patterns/3%20-%20Iterator) : Provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation. It’s commonly used in Java’s Collection Framework.
+
+        
+        * [Mediator](./04%20-%20Behavioral%20Design%20Patterns/4%20-%20Mediator) : Defines an object that encapsulates how a set of objects interact. It promotes loose coupling by keeping objects from referring to each other explicitly and it allows their interaction to be varied independently.
+
+        
+        * [Memento](./04%20-%20Behavioral%20Design%20Patterns/5%20-%20Memento) : Provides the ability to restore an object to its previous state (undo via rollback). It is useful for implementing features such as undo mechanisms.
+
+        
+        * [Observer](./04%20-%20Behavioral%20Design%20Patterns/6%20-%20Observer) : Defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically. It’s widely used in implementing distributed event handling systems.
+
+        
+        * [State](./04%20-%20Behavioral%20Design%20Patterns/7%20-%20State) : Allows an object to alter its behavior when its internal state changes. The object will appear to change its class. This pattern is often used in the context of state machines.
+
+        
+        * [Strategy](./04%20-%20Behavioral%20Design%20Patterns/8%20-%20Strategy) : Defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it. This is useful for algorithms that can be selected at runtime or to provide a variety of behaviors for the same operation.
+
+
+        * [Template Method](./04%20-%20Behavioral%20Design%20Patterns/9%20-%20Template%20Method) : Defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure. It’s a fundamental technique for code reuse.
+
+
+        * [Visitor](./04%20-%20Behavioral%20Design%20Patterns/10%20-%20Visitor) : Represents an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates. It’s useful when operations need to be added to complex object structures, like document objects or ASTs (Abstract Syntax Trees).
+
+
+
