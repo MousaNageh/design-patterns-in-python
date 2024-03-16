@@ -14,6 +14,7 @@
 
         * [Dependency Inversion Principle (DIP)](./01%20-%20The%20SOLID%20Design%20Principles/Dependency_Inversion_Principle.py): High-level modules should not depend on low-level modules. Both should depend on abstractions. Moreover, abstractions should not depend on details; details should depend on abstractions. This principle leads to a decoupling of software modules, making the system more flexible and enabling the independent development and testing of modules.
 
+        `______________________________________________________________`
     
 
     2. [Creational Design Patterns](./02%20-%20Creational%20Design%20Patterns):
@@ -28,7 +29,8 @@
         * [prototype](./02%20-%20Creational%20Design%20Patterns/3%20-%20prototype) : Creates new objects by copying an existing object, known as the prototype.
 
         * [singleton](./02%20-%20Creational%20Design%20Patterns/4%20-%20singleton) :  Ensures a class has only one instance and provides a global point of access to it
-    
+
+        `______________________________________________________________`
     
     3. [Structural Design Patterns](./03%20-%20Structural%20Design%20Patterns):
 
@@ -48,3 +50,5 @@
         * [Flyweight](./03%20-%20Structural%20Design%20Patterns/6%20-%20Flyweight) : Minimizes memory usage or computational expenses by sharing as much as possible with similar objects; it's about sharing to support large numbers of fine-grained objects efficiently.
 
         * [Proxy](./03%20-%20Structural%20Design%20Patterns/7%20-%20Proxy) : Provides a surrogate or placeholder for another object to control access to it, useful for lazy loading, controlling access, or logging, for instance.
+
+        `______________________________________________________________`
