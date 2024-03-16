@@ -1,7 +1,8 @@
-'''
+"""
 The Proxy Design Pattern is a structural design pattern that provides a surrogate or placeholder for another object to control access to it.
-'''
-'''
+"""
+
+"""
 Types of Proxy Patterns
 
 1 - Virtual Proxy: This type of proxy creates expensive objects on demand. 
@@ -20,8 +21,8 @@ Types of Proxy Patterns
     This could include adding logging, access control, or caching functionalities. 
     Smart proxies are useful when actions need to be taken before or after the execution of certain operations by the object.
 
-'''
-'''
+"""
+"""
 note :
  the proxy must have the same interface as underleying objects
-'''
+"""

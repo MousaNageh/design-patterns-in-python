@@ -1,4 +1,4 @@
-'''
+"""
 The Builder design pattern is a creational pattern used to construct complex objects step by step. 
 It is especially useful when an object needs to be created with many optional components or configurations. 
 The main idea is to separate the construction of a complex object from its representation,
@@ -16,17 +16,18 @@ Key Components
 
 3 - Director: Constructs an object using the Builder interface (optional).
 
-'''
+"""
 
-'''
+"""
 Example: Building a Computer
 
 Let's consider an example where we want to build a customized Computer.
 A Computer can have several components such as the CPU, GPU, memory, and storage. 
 Not all computers will have the same components; some may have a high-end GPU, while others might not include one at all.
 
-'''
+"""
 from abc import ABC, abstractclassmethod
+
 
 # Product
 class Computer:
@@ -38,7 +39,7 @@ class Computer:
 
     def __str__(self):
         return f"Computer(CPU: {self.cpu}, GPU: {self.gpu}, Memory: {self.memory}, Storage: {self.storage})"
-    
+
     @staticmethod
     def build():
         return MyComputerBuilder(computer=Computer())
@@ -46,28 +47,28 @@ class Computer:
 
 # Builder Interface
 class ComputerBuilder(ABC):
-    
+
     @abstractclassmethod
     def set_cpu(self, cpu): ...
-    
+
     @abstractclassmethod
     def set_gpu(self, gpu): ...
 
     @abstractclassmethod
     def set_memory(self, memory): ...
-    
+
     @abstractclassmethod
     def set_storage(self, storage): ...
-        
+
     @abstractclassmethod
-    def get_computer(self): ... 
+    def get_computer(self): ...
 
 
 # Concrete Builder
 class MyComputerBuilder(ComputerBuilder):
-    def __init__(self, computer: Computer= None):
+    def __init__(self, computer: Computer = None):
         self.computer = Computer() if not computer else computer
-    
+
     def set_cpu(self, cpu):
         self.computer.cpu = cpu
         return self
@@ -87,21 +88,23 @@ class MyComputerBuilder(ComputerBuilder):
     def get_computer(self):
         return self.computer
 
+
 # Director
 class ComputerDirector:
     def __init__(self, builder: ComputerBuilder):
         self._builder = builder
 
     def build_minimal_viable_computer(self):
-        self._builder.set_cpu('i5')
-        self._builder.set_memory('8GB')
+        self._builder.set_cpu("i5")
+        self._builder.set_memory("8GB")
 
     def build_full_featured_computer(self):
-        self._builder.set_cpu('i9')
-        self._builder.set_gpu('RTX 3080')
-        self._builder.set_memory('32GB')
-        self._builder.set_storage('1TB SSD')
-        
+        self._builder.set_cpu("i9")
+        self._builder.set_gpu("RTX 3080")
+        self._builder.set_memory("32GB")
+        self._builder.set_storage("1TB SSD")
+
+
 builder = Computer.build()
 director = ComputerDirector(builder)
 

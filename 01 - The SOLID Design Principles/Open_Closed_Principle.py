@@ -1,6 +1,6 @@
-'''
+"""
 Open-Close principle (OCP): open for expansion closed for modification
-'''
+"""
 
 # without OCP: product with size and color
 from enum import Enum
@@ -60,6 +60,7 @@ class Specification:
 class Filter:
     def filter(self, items: List[Product], spec: Specification): ...
 
+
 # generic product filter
 
 
@@ -69,6 +70,7 @@ class ProductFilter(Filter):
         for item in items:
             if spec.is_satisfied(item):
                 yield item
+
 
 # now we can inherit from  Specification to add all condition and user ProductFilter2 to be work with all filter
 
@@ -87,6 +89,8 @@ class SizeSpecification(Specification):
 
     def is_satisfied(self, item: Product):
         return self.size == item.size
+
+
 # what about 'and' Specification
 
 
@@ -95,12 +99,7 @@ class AndSpecification(Specification):
         self.specs = specs
 
     def is_satisfied(self, item: Product):
-        return all(
-            map(
-                lambda spec: spec.is_satisfied(item),
-                self.specs
-            )
-        )
+        return all(map(lambda spec: spec.is_satisfied(item), self.specs))
 
 
 class OrSpecification(Specification):
@@ -108,12 +107,7 @@ class OrSpecification(Specification):
         self.specs = specs
 
     def is_satisfied(self, item: Product):
-        return any(
-            map(
-                lambda spec: spec.is_satisfied(item),
-                self.specs
-            )
-        )
+        return any(map(lambda spec: spec.is_satisfied(item), self.specs))
 
 
 if __name__ == "__main__":

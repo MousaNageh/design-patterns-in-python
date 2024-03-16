@@ -1,4 +1,4 @@
-'''
+"""
 1 - Global State: Singleton essentially introduces a global state in your application, 
                   which can lead to hidden dependencies between classes and functions. 
                   This can make the code harder to understand and maintain.
@@ -32,4 +32,4 @@
                                  it can lead to memory leaks, 
                                  especially if the singleton holds onto other resources that should be released or cleaned up.
 
-'''
+"""
