@@ -61,7 +61,7 @@
         * [Chain of Responsibility](./04%20-%20Behavioral%20Design%20Patterns/1%20-%20Chain%20of%20Responsibility) : The Chain of Responsibility    pattern is a behavioral design pattern that allows you to pass requests along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain. 
 
         
-        * [Command](./04%20-%20Behavioral%20Design%20Patterns/2%20-%20Command) : Encapsulates a request as an object, thereby allowing for the parameterization of clients with queues, requests, and operations. It also allows for the support of undoable operations.
+        * [Command](./04%20-%20Behavioral%20Design%20Patterns/2%20-%20Command) : The Command design pattern is a behavioral design pattern that turns a request into a stand-alone object containing all information about the request. This transformation allows you to parameterize methods with different requests, delay or queue a request's execution, and support undoable operations.
 
 
         * [Iterator](./04%20-%20Behavioral%20Design%20Patterns/3%20-%20Iterator) : Provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation. It’s commonly used in Java’s Collection Framework.
