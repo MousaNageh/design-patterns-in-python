@@ -1,19 +1,11 @@
 '''
 
-The Observer Design Pattern is a software design pattern where an object, called the observable,
-maintains a list of its dependents, called observers, and notifies them automatically of any state changes, 
-usually by calling one of their methods. 
-It's a foundational pattern for event-driven programming and is particularly useful in scenarios where an object 
-needs to notify other objects about changes in its state.
+Observer is a behavioral design pattern:
+    that lets you define a subscription mechanism to notify multiple objects about any events that happen to the object they’re observing.
 
-In the Observer pattern, there are two main components:
+Observable (Subject): will notifies all it's objects
 
-Observable (Subject): The entity whose state changes and needs to communicate this change to other objects. 
-                It maintains a list of observers and provides mechanisms to add or remove observers from this list. When its state changes,
-                it notifies all the registered observers.
-
-Observer: An interface or abstract class defining the update method that will be called by the Observable when its state changes. 
-          Concrete implementations of the Observer will process these notifications accordingly.
+Observer: the object that will receive the event
 '''
 
 from typing import  Callable, List
